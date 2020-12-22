@@ -32,11 +32,12 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'WGZMJImageEditor/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'WGZMJImageEditor' => ['WGZMJImageEditor/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
+   s.resource = ['WGZMJImageEditor/Assets/**/*']
+   s.dependency 'YYCategories', '~> 1.0.4'
+   s.dependency 'Masonry',      '~> 1.0.1'
+   s.dependency 'GPUImage', '~> 0.1.7'
+   s.public_header_files = 'WGZMJImageEditor/Classes/**/*.h'
+   s.user_target_xcconfig = { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES' }
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
 end

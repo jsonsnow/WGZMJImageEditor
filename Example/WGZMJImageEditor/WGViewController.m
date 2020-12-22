@@ -7,8 +7,9 @@
 //
 
 #import "WGViewController.h"
+#import <WBGImageEditor.h>
 
-@interface WGViewController ()
+@interface WGViewController ()<WBGImageEditorDelegate, WBGImageEditorDataSource>
 
 @end
 
@@ -17,6 +18,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        NSData *data = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"1608280290155_0" ofType:@"jpg"]];
+           WBGImageEditor *editor = [[WBGImageEditor alloc] initWithImage:[UIImage imageWithData:data] delegate:self dataSource:self];
+           editor.imageEditorDidFinishEdittingHandler = ^(WBGImageEditor *editor, UIImage *image) {
+               [editor dismissViewControllerAnimated:YES completion:nil];
+           };
+           [self presentViewController:editor animated:YES completion:nil];
+    });
+   
 	// Do any additional setup after loading the view, typically from a nib.
 }
 

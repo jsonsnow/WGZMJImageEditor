@@ -1,0 +1,6 @@
+framework module WGZMJImageEditor {
+  umbrella header "WGZMJImageEditor-umbrella.h"
+
+  export *
+  module * { export * }
+}

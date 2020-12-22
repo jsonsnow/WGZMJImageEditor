@@ -24,6 +24,7 @@
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		B54C676009F0F347F02C61B1 /* Pods_WGZMJImageEditor_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EA152CF5E081CE03D6B3726 /* Pods_WGZMJImageEditor_Example.framework */; };
+		BA7B27402591CA17002562DB /* 1608280290155_0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BA7B273F2591CA17002562DB /* 1608280290155_0.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +40,8 @@
 /* Begin PBXFileReference section */
 		0478D14F92217D258B91E98E /* Pods-WGZMJImageEditor_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WGZMJImageEditor_Tests.debug.xcconfig"; path = "Target Support Files/Pods-WGZMJImageEditor_Tests/Pods-WGZMJImageEditor_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		114793E02E62503A02BD5968 /* Pods-WGZMJImageEditor_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WGZMJImageEditor_Example.release.xcconfig"; path = "Target Support Files/Pods-WGZMJImageEditor_Example/Pods-WGZMJImageEditor_Example.release.xcconfig"; sourceTree = "<group>"; };
-		13AA402B4483EAF0B18230A7 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		2F696220DCFBB88B7348A9A0 /* WGZMJImageEditor.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = WGZMJImageEditor.podspec; path = ../WGZMJImageEditor.podspec; sourceTree = "<group>"; };
+		13AA402B4483EAF0B18230A7 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		2F696220DCFBB88B7348A9A0 /* WGZMJImageEditor.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = WGZMJImageEditor.podspec; path = ../WGZMJImageEditor.podspec; sourceTree = "<group>"; };
 		5BE191E7CD545EF70EA10611 /* Pods-WGZMJImageEditor_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WGZMJImageEditor_Tests.release.xcconfig"; path = "Target Support Files/Pods-WGZMJImageEditor_Tests/Pods-WGZMJImageEditor_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* WGZMJImageEditor_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WGZMJImageEditor_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -64,7 +65,8 @@
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7EA152CF5E081CE03D6B3726 /* Pods_WGZMJImageEditor_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WGZMJImageEditor_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		9A476B2B439868934AC06E4A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		9A476B2B439868934AC06E4A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		BA7B273F2591CA17002562DB /* 1608280290155_0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1608280290155_0.jpg; sourceTree = "<group>"; };
 		BB34266E2A45F741CB2B1B28 /* Pods_WGZMJImageEditor_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WGZMJImageEditor_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8FD6F9E0267B55079F4AA12 /* Pods-WGZMJImageEditor_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WGZMJImageEditor_Example.debug.xcconfig"; path = "Target Support Files/Pods-WGZMJImageEditor_Example/Pods-WGZMJImageEditor_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -148,6 +150,7 @@
 		6003F594195388D20070C39A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BA7B273F2591CA17002562DB /* 1608280290155_0.jpg */,
 				6003F595195388D20070C39A /* WGZMJImageEditor-Info.plist */,
 				6003F596195388D20070C39A /* InfoPlist.strings */,
 				6003F599195388D20070C39A /* main.m */,
@@ -193,7 +196,6 @@
 				0478D14F92217D258B91E98E /* Pods-WGZMJImageEditor_Tests.debug.xcconfig */,
 				5BE191E7CD545EF70EA10611 /* Pods-WGZMJImageEditor_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -258,6 +260,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -279,6 +282,7 @@
 			files = (
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
+				BA7B27402591CA17002562DB /* 1608280290155_0.jpg in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
@@ -324,11 +328,17 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-WGZMJImageEditor_Example/Pods-WGZMJImageEditor_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GPUImage/GPUImage.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/WGZMJImageEditor/WGZMJImageEditor.framework",
+				"${BUILT_PRODUCTS_DIR}/YYCategories/YYCategories.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GPUImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WGZMJImageEditor.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYCategories.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
