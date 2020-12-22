@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '9.0'
+
+target 'WGZMJImageEditor_Example' do
+  pod 'WGZMJImageEditor', :path => '../'
+
+  target 'WGZMJImageEditor_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
