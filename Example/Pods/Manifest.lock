@@ -1,7 +1,7 @@
 PODS:
   - GPUImage (0.1.7)
   - Masonry (1.0.2)
-  - WGZMJImageEditor (0.1.0):
+  - WGZMJImageEditor (0.1.1):
     - GPUImage (~> 0.1.7)
     - Masonry (~> 1.0.1)
     - YYCategories (~> 1.0.4)
@@ -25,7 +25,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
-  WGZMJImageEditor: be3c6b7ffc99164bcf39040b78072b5785914949
+  WGZMJImageEditor: 45ffa4206cb12179aeccbbca8f3a6af268dc723b
   YYCategories: 6bcd4314c6661a561410dce4a793379ebd306abd
 
 PODFILE CHECKSUM: 0669b90e0f9fadf50613037f3b3de38dbe8fa079

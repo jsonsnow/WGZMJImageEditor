@@ -1,6 +1,6 @@
 {
   "name": "WGZMJImageEditor",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "summary": "A short description of WGZMJImageEditor.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/jsonsnow/WGZMJImageEditor",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/jsonsnow/WGZMJImageEditor.git",
-    "tag": "0.1.0"
+    "tag": "0.1.1"
   },
   "platforms": {
     "ios": "9.0"
@@ -33,5 +33,9 @@
       "~> 0.1.7"
     ]
   },
-  "public_header_files": "WGZMJImageEditor/Classes/**/*.h"
+  "public_header_files": "WGZMJImageEditor/Classes/**/*.h",
+  "pod_target_xcconfig": {
+    "SUPPORTS_MACCATALYST": "YES",
+    "DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER": "NO"
+  }
 }

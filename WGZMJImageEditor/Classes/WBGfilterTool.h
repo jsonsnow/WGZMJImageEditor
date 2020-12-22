@@ -8,7 +8,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "WBGfilterItem.h"
-#import "GPUImage.h"
+#import <GPUImage/GPUImage.h>
 
 @interface WBGfilterTool : NSObject
 
