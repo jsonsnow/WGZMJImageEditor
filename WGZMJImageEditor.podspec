@@ -30,7 +30,14 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '9.0'
 
-  s.source_files = 'WGZMJImageEditor/Classes/**/*'
+  # s.source_files = 'WGZMJImageEditor/Classes/**/*'
+  s.subspec 'Core' do |core|
+    core.source_files = 'WGZMJImageEditor/Classes/Core/**/*'
+  end
+
+  s.subspec 'Module' do |value|
+    value.source_files = 'WGZMJImageEditor/Classes/Module/**/*'
+  end
   
    s.resource = ['WGZMJImageEditor/Assets/**/*']
    s.dependency 'YYCategories', '~> 1.0.4'
@@ -43,4 +50,6 @@ TODO: Add long description of the pod here.
    }
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
+    s.dependency 'WGRouter'
+    s.dependency 'Mediator'
 end

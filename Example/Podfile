@@ -1,9 +1,11 @@
 use_frameworks!
 
 platform :ios, '9.0'
-
+source 'https://github.com/jsonsnow/CLSpces.git'
 target 'WGZMJImageEditor_Example' do
   pod 'WGZMJImageEditor', :path => '../'
+  pod 'WGRouter'
+  pod 'Mediator',:path => '../../Mediator'
 
   target 'WGZMJImageEditor_Tests' do
     inherit! :search_paths

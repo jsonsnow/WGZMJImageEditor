@@ -8,12 +8,26 @@
 
 #import "WBGImageEditor.h"
 #import "WBGImageEditorViewController.h"
+#import <Mediator/WGImageEditModuleService.h>
 
 @interface WBGImageEditor ()
 
 @end
 
 @implementation WBGImageEditor
+
++ (void)load {
+    [Bifrost bindURL:kRouteImageEdit toHandler:^id _Nullable(NSDictionary * _Nullable parameters) {
+        UIImage *image = parameters[kRouteImageEditParamImage];
+         void(^callback)(id result) = parameters[kBifrostRouteCompletion];
+        WBGImageEditor *editor = [[WBGImageEditor alloc] initWithImage:image];
+        editor.imageEditorDidFinishEdittingHandler = ^(WBGImageEditor *editor, UIImage *image) {
+            [editor dismissViewControllerAnimated:YES completion:nil];
+            callback(image);
+        };
+        return editor;
+    }];
+}
 
 - (instancetype)init
 {
