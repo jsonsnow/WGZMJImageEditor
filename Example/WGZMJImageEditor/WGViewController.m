@@ -9,11 +9,29 @@
 #import "WGViewController.h"
 #import <WBGImageEditor.h>
 
+@interface TestObject : NSObject
+
+@end
+
+@implementation TestObject
+
+- (void)dealloc {
+    NSLog(@"dealloc");
+}
+
+- (void)send {
+    
+}
+
+@end
+
 @interface WGViewController ()<WBGImageEditorDelegate, WBGImageEditorDataSource>
+@property (nonatomic, copy) void(^testBlock)();
 
 @end
 
 @implementation WGViewController
+
 
 - (void)viewDidLoad
 {
@@ -26,6 +44,15 @@
            };
            [self presentViewController:editor animated:YES completion:nil];
     });
+    NSLog(@"start");
+    self.testBlock = ^{
+        TestObject *test = [[TestObject alloc] init];
+        [test send];
+    };
+    self.testBlock();
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        self.testBlock = nil;
+//    });
    
 	// Do any additional setup after loading the view, typically from a nib.
 }
