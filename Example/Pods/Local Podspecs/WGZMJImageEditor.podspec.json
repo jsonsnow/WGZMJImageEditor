@@ -1,6 +1,6 @@
 {
   "name": "WGZMJImageEditor",
-  "version": "0.1.1",
+  "version": "0.1.4",
   "summary": "A short description of WGZMJImageEditor.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/jsonsnow/WGZMJImageEditor",
@@ -13,12 +13,11 @@
   },
   "source": {
     "git": "https://github.com/jsonsnow/WGZMJImageEditor.git",
-    "tag": "0.1.1"
+    "tag": "0.1.4"
   },
   "platforms": {
     "ios": "9.0"
   },
-  "source_files": "WGZMJImageEditor/Classes/**/*",
   "resources": [
     "WGZMJImageEditor/Assets/**/*"
   ],
@@ -31,11 +30,27 @@
     ],
     "GPUImage": [
       "~> 0.1.7"
+    ],
+    "WGRouter": [
+
+    ],
+    "Mediator": [
+
     ]
   },
-  "public_header_files": "WGZMJImageEditor/Classes/**/*.h",
   "pod_target_xcconfig": {
     "SUPPORTS_MACCATALYST": "YES",
     "DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER": "NO"
-  }
+  },
+  "subspecs": [
+    {
+      "name": "Core",
+      "source_files": "WGZMJImageEditor/Classes/Core/**/*",
+      "public_header_files": ""
+    },
+    {
+      "name": "Module",
+      "source_files": "WGZMJImageEditor/Classes/Module/**/*"
+    }
+  ]
 }

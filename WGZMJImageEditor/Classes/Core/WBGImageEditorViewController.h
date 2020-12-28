@@ -25,7 +25,7 @@ extern NSString * const kColorPanNotificaiton;
 @property (nonatomic, weak) id<WBGImageEditorDataSource> dataSource;
 @end
 
-@interface WBGImageEditorViewController : WBGImageEditor
+@interface WBGImageEditorViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIButton *backButton;
 @property (weak, nonatomic) IBOutlet UIButton *undoButton;
 
@@ -36,7 +36,11 @@ extern NSString * const kColorPanNotificaiton;
 
 @property (nonatomic, assign) BOOL needChangeOriention;
 @property (nonatomic, assign) EditorMode currentMode;
+@property (nonatomic, copy) void(^imageEditorDidFinishEdittingHandler)(WBGImageEditorViewController *edit, UIImage *result);
+@property (nonatomic, weak) id<WBGImageEditorDelegate> delegate;
+@property (nonatomic, weak) id<WBGImageEditorDataSource> dataSource;
 
+- (id)initWithImage:(UIImage*)image delegate:(id<WBGImageEditorDelegate>)delegate dataSource:(id<WBGImageEditorDataSource>)dataSource;
 - (void)resetCurrentTool;
 
 - (void)editTextAgain;

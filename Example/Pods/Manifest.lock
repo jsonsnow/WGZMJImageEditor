@@ -1,33 +1,66 @@
 PODS:
   - GPUImage (0.1.7)
   - Masonry (1.0.2)
-  - WGZMJImageEditor (0.1.1):
+  - Mediator (0.1.1):
+    - Mediator/ModuleHelper (= 0.1.1)
+    - Mediator/ModuleService (= 0.1.1)
+    - WGRouter
+  - Mediator/ModuleHelper (0.1.1):
+    - WGRouter
+  - Mediator/ModuleService (0.1.1):
+    - WGRouter
+  - WGRouter (0.1.0)
+  - WGZMJImageEditor (0.1.4):
     - GPUImage (~> 0.1.7)
     - Masonry (~> 1.0.1)
+    - Mediator
+    - WGRouter
+    - WGZMJImageEditor/Core (= 0.1.4)
+    - WGZMJImageEditor/Module (= 0.1.4)
+    - YYCategories (~> 1.0.4)
+  - WGZMJImageEditor/Core (0.1.4):
+    - GPUImage (~> 0.1.7)
+    - Masonry (~> 1.0.1)
+    - Mediator
+    - WGRouter
+    - YYCategories (~> 1.0.4)
+  - WGZMJImageEditor/Module (0.1.4):
+    - GPUImage (~> 0.1.7)
+    - Masonry (~> 1.0.1)
+    - Mediator
+    - WGRouter
     - YYCategories (~> 1.0.4)
   - YYCategories (1.0.4):
     - YYCategories/no-arc (= 1.0.4)
   - YYCategories/no-arc (1.0.4)
 
 DEPENDENCIES:
+  - Mediator (from `../../Mediator`)
+  - WGRouter
   - WGZMJImageEditor (from `../`)
 
 SPEC REPOS:
+  https://github.com/jsonsnow/CLSpces.git:
+    - WGRouter
   trunk:
     - GPUImage
     - Masonry
     - YYCategories
 
 EXTERNAL SOURCES:
+  Mediator:
+    :path: "../../Mediator"
   WGZMJImageEditor:
     :path: "../"
 
 SPEC CHECKSUMS:
   GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
-  WGZMJImageEditor: 45ffa4206cb12179aeccbbca8f3a6af268dc723b
+  Mediator: 40eff3dd057b6a28943aec960550ac6b4c100d5b
+  WGRouter: 12df174f180cff141c947c00cfd563c069fec2a0
+  WGZMJImageEditor: 53c3ba71307a4f5c55e2e8c2073ba198e4cc2cc4
   YYCategories: 6bcd4314c6661a561410dce4a793379ebd306abd
 
-PODFILE CHECKSUM: 0669b90e0f9fadf50613037f3b3de38dbe8fa079
+PODFILE CHECKSUM: fce12db7d4e86908625b02fd1303dec078d60515
 
 COCOAPODS: 1.9.1

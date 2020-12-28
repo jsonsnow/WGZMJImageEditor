@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'WGZMJImageEditor'
-  s.version          = '0.1.2'
+  s.version          = '0.1.4'
   s.summary          = 'A short description of WGZMJImageEditor.'
 
 # This description is used to generate tags and improve search results.
@@ -30,17 +30,27 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '9.0'
 
-  s.source_files = 'WGZMJImageEditor/Classes/**/*'
+  # s.source_files = 'WGZMJImageEditor/Classes/**/*'
+  s.subspec 'Core' do |core|
+    core.source_files = 'WGZMJImageEditor/Classes/Core/**/*'
+    core.public_header_files = ''
+  end
+
+  s.subspec 'Module' do |value|
+    value.source_files = 'WGZMJImageEditor/Classes/Module/**/*'
+  end
   
    s.resource = ['WGZMJImageEditor/Assets/**/*']
    s.dependency 'YYCategories', '~> 1.0.4'
    s.dependency 'Masonry',      '~> 1.0.1'
    s.dependency 'GPUImage', '~> 0.1.7'
-   s.public_header_files = 'WGZMJImageEditor/Classes/**/*.h'
+   #s.public_header_files = 'WGZMJImageEditor/Classes/**/*.h'
    s.pod_target_xcconfig = {
      'SUPPORTS_MACCATALYST' => 'YES',
      'DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER' => 'NO'
    }
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
+    s.dependency 'WGRouter'
+    s.dependency 'Mediator'
 end

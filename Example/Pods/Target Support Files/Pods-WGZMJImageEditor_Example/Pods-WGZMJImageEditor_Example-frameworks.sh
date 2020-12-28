@@ -199,12 +199,16 @@ fi
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/GPUImage/GPUImage.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Mediator/Mediator.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/WGRouter/WGRouter.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/WGZMJImageEditor/WGZMJImageEditor.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/YYCategories/YYCategories.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/GPUImage/GPUImage.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Mediator/Mediator.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/WGRouter/WGRouter.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/WGZMJImageEditor/WGZMJImageEditor.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/YYCategories/YYCategories.framework"
 fi

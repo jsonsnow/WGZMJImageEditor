@@ -30,19 +30,13 @@ typedef NS_OPTIONS(NSInteger, WBGImageEditorComponent) {
 
 typedef void(^WBGImageEditorDidFinishEdittingHandler)(WBGImageEditor *editor, UIImage *image);
 
-@interface WBGImageEditor : UIViewController
+@interface WBGImageEditor : NSObject
 
 @property (nonatomic, assign) BOOL needChangeOriention;
 @property (nonatomic, weak) id<WBGImageEditorDelegate> delegate;
 @property (nonatomic, weak) id<WBGImageEditorDataSource> dataSource;
 @property (nonatomic, copy) WBGImageEditorDidFinishEdittingHandler imageEditorDidFinishEdittingHandler;
 
-- (id)initWithImage:(UIImage*)image;
-- (id)initWithImage:(UIImage*)image delegate:(id<WBGImageEditorDelegate>)delegate dataSource:(id<WBGImageEditorDataSource>)dataSource;
-- (id)initWithDelegate:(id<WBGImageEditorDelegate>)delegate;
-
-- (void)showInViewController:(UIViewController<WBGImageEditorTransitionDelegate> *)controller withImageView:(UIImageView*)imageView;
-- (void)refreshToolSettings;
 @end
 
 #pragma mark - Protocol

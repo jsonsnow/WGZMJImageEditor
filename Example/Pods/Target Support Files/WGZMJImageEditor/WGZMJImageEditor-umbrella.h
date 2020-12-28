@@ -46,6 +46,8 @@
 #import "WBGMosicaViewController.h"
 #import "WBGTextTool.h"
 #import "WBGTextToolView.h"
+#import "ImageEditBundle.h"
+#import "ImageEditModule.h"
 
 FOUNDATION_EXPORT double WGZMJImageEditorVersionNumber;
 FOUNDATION_EXPORT const unsigned char WGZMJImageEditorVersionString[];
