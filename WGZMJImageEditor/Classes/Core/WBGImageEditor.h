@@ -42,15 +42,15 @@ typedef void(^WBGImageEditorDidFinishEdittingHandler)(WBGImageEditor *editor, UI
 #pragma mark - Protocol
 @protocol WBGImageEditorDelegate <NSObject>
 @optional
-- (void)imageEditor:(WBGImageEditor *)editor didFinishEdittingWithImage:(UIImage *)image;
-- (void)imageEditorDidCancel:(WBGImageEditor *)editor;
+- (void)imageEditor:(UIViewController *)editor didFinishEdittingWithImage:(UIImage *)image;
+- (void)imageEditorDidCancel:(UIViewController *)editor;
 
 @end
 
 @protocol WBGImageEditorDataSource <NSObject>
 
 @required
-- (NSArray<WBGMoreKeyboardItem *> *)imageItemsEditor:(WBGImageEditor *)editor;
+- (NSArray<WBGMoreKeyboardItem *> *)imageItemsEditor:(UIViewController *)editor;
 - (WBGImageEditorComponent)imageEditorCompoment;
 
 @optional
@@ -61,7 +61,7 @@ typedef void(^WBGImageEditorDidFinishEdittingHandler)(WBGImageEditor *editor, UI
 
 @protocol WBGImageEditorTransitionDelegate <WBGImageEditorDelegate>
 @optional
-- (void)imageEditor:(WBGImageEditor *)editor willDismissWithImageView:(UIImageView *)imageView canceled:(BOOL)canceled;
-- (void)imageEditor:(WBGImageEditor *)editor didDismissWithImageView:(UIImageView *)imageView canceled:(BOOL)canceled;
+- (void)imageEditor:(UIViewController *)editor willDismissWithImageView:(UIImageView *)imageView canceled:(BOOL)canceled;
+- (void)imageEditor:(UIViewController *)editor didDismissWithImageView:(UIImageView *)imageView canceled:(BOOL)canceled;
 
 @end

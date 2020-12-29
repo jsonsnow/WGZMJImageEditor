@@ -25,16 +25,18 @@
         void(^callback)(id result) = parameters[kBifrostRouteCompletion];
         BOOL autoDismiss = [parameters[kRouteImageEditParamAutoDismiss] boolValue];
         UIColor *defaultColor = parameters[kRouteImageEditParamDefaultColor];
+        BOOL changeOriention = [parameters[kRouteImageEditParamNeedChangeOriention] boolValue];
         WBGImageEditor *editWrap = [WBGImageEditor edit];
         [editWrap reset];
         WBGImageEditorViewController *ctr = [editWrap _buildEditorCtrByImage:image];
         editWrap.autoDismiss = autoDismiss;
         editWrap.defalutColor = defaultColor;
+        ctr.needChangeOriention = changeOriention;
         ctr.imageEditorDidFinishEdittingHandler = ^(WBGImageEditorViewController *editor, UIImage *image) {
             if (autoDismiss) {
                 [editor dismissViewControllerAnimated:YES completion:nil];
             }
-            callback(image);
+            callback(@{kRouteImageEditParamEditorCtr: editor, kRouteImageEditParamImage: image});
         };
         return ctr;
     }];
@@ -57,7 +59,7 @@
 #pragma mark --private method
 
 - (WBGImageEditorViewController *)_buildEditorCtrByImage:(UIImage *)image {
-    WBGImageEditorViewController *edit = [[WBGImageEditorViewController alloc] initWithImage:image delegate:self dataSource:self];
+    WBGImageEditorViewController *edit = [[WBGImageEditorViewController alloc] initWithImage:image delegate:nil dataSource:self];
     return edit;
 }
 
@@ -69,8 +71,7 @@
 #pragma mark --WBGImageEditorDataSource
 
 - (WBGImageEditorComponent)imageEditorCompoment {
-    NSLog(@"cccc");
-    return WBGImageEditorTextComponent;
+    return WBGImageEditorWholeComponent;
 }
 
 - (NSArray<WBGMoreKeyboardItem *> *)imageItemsEditor:(WBGImageEditor *)editor {

@@ -57,13 +57,13 @@
     }
     self.imageView.frame = rect;
     self.imageView.center = self.view.center;
-    self.scrollView.frame = CGRectMake(0, [UIScreen mainScreen].bounds.size.height-99, [UIScreen mainScreen].bounds.size.width, 50);
     self.sliderView.frame = CGRectMake(0,  [UIScreen mainScreen].bounds.size.height-149, self.view.frame.size.width, 50);
     self.slider.frame = CGRectMake(lr_space*2+50, 0, self.view.frame.size.width-50-lr_space*2-50, 50);
     self.restBtn.frame = CGRectMake(lr_space, 7, 50, 36);
     self.rightLabel.frame = CGRectMake(self.view.frame.size.width-45, 0, 40, 50);
     [self.toolView removeFromSuperview];
     [self setupToolView];
+    self.scrollView.frame = CGRectMake(0, CGRectGetMinY(self.toolView.frame) - 50, [UIScreen mainScreen].bounds.size.width, 50);
 }
 
 - (void)setupArray{

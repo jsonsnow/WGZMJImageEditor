@@ -500,6 +500,9 @@ NSString * const kColorPanNotificaiton = @"kColorPanNotificaiton";
     [self buildClipImageShowHud:YES clipedCallback:^(UIImage *clipedImage) {
         
         if (self.imageEditorDidFinishEdittingHandler) {
+            if (self.needChangeOriention) {
+                [self orientationToPortrait:UIDeviceOrientationPortrait];
+            }
             self.imageEditorDidFinishEdittingHandler(self,clipedImage);
         }
         
